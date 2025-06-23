@@ -1,42 +1,41 @@
 <template>
-  <div class="login">
-  <div class ="form">
-    <h1>Login</h1>
-    
-    <p>Don't have an account? <a href="/register"><span class="r_color">Register</span></a></p>
+   
+<div class="register">
+     <div class="form">
+    <h1>Register</h1>
     <br/>
-      <label for="username"></label>
-      <input type ="text" id="username" name="username" placeholder="Enter your username" required v-model="username" />
+
+    <label for="username"></label>
+    <input type="text" id="username" name="username" placeholder="Enter your username" required  v-model="username"/>
+
     <br />
-    <br />
-    <br />
-    <br />
-      <label for="password"></label>
-      <input type ="password" id="password" name="password" placeholder="Input your password" required  v-model="password"/>
-      <br />
-    <br />
-    <br />
-  <div class="guumb">
-    <button type="submit" @click="do_manage">Login</button>
-  </div>
-  </div>
-    <br />
+    <br/>
+
+    <label for="email"></label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required  v-model="email"/>
+
     <br />
     <br />
 
- 
+    <label for="password"></label>
+    <input type="password" id="password" name="password" placeholder="Input your password" required v-model="password" />
 
+    <br />
+    <br />
+<div class="gumb">
+    <button type="submit" @click="do_login">Submit</button>
+</div>
+</div>
+</div>
 
-
-
-
-
-  </div>
-  
 </template>
 
+
+
+
 <style scoped>
-.login{
+
+.register{
 
 
 background-image: url('@/assets/pozadina_svega.png');
@@ -86,7 +85,6 @@ text-align: center;
 color:974805;
 width: 600px;
 padding: 40px;
-
 }
 input[type="password"] {
 background-color: #CD9149;
@@ -109,38 +107,39 @@ padding: 40px;
     width: 200px;
   }
 
-.r_color{
-  color:#E37383;
-  font-weight: bold;
-  border-bottom: #974805;
-  cursor:pointer ;
+input[type="email"] {
+background-color: #CD9149;
+border-radius: 10px ;
+text-align: center; 
+color:974805;
+width: 600px;
+padding: 40px;
+
 }
 
-
 </style>
-
 
 <script>
 
 export default {
   data() {
     return {
+
       username: '',
+      email:'',
       password: '',
       errorMessage: ''
     }
   },
   methods: {
-    do_manage() {
+    do_login() {
       if (!this.username || !this.password) {
-        this.errorMessage = 'Please fill in both username and password!';
+        this.errorMessage = 'Please fill in all boxses!';
       } else {
         this.errorMessage = '';
-        this.$router.push('/manag');
+        this.$router.push('/login');
       }
     }
   }
 }
 </script>
-
-
