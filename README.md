@@ -1,3 +1,11 @@
+Planner Valley aplikacija napravljena za vrijeme studiranja na: https://fipu.unipu.hr/ , u sklopu kolegija Programsko inženjerstvo - ntankovic.unipu.hr/pi
+TIM: Rahela Štos
+
+
+
+
+
+
 # planner_valley
 
 ## Project setup
